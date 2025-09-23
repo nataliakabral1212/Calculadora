@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F8BBD0">
+
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:orientation="horizontal"
+     android:weightSum="2">
+
+  <Button
+      android:id="@+id/btnClear"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:text="Clear"
+      android:backgroundTint="#DB507F"
+      android:textColor="#FFFFFF"
+      android:textStyle="bold"/>
+
+  <Button
+      android:id="@+id/btnClearAll"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:text="Clear All"
+      android:backgroundTint="#D13469"
+      android:textColor="#FFFFFF"
+      android:textStyle="bold"/>
+ </LinearLayout>
+
+
+ <TextView
+     android:id="@+id/Pantalla"
+     android:layout_width="match_parent"
+     android:layout_height="150dp"
+     android:layout_marginTop="8dp"
+     android:gravity="end|center_vertical"
+     android:background="#FCE4EC"
+     android:text="0"
+     android:textSize="32sp"
+     android:textColor="#880E4F"
+     android:padding="12dp"
+     android:ellipsize="end"
+     android:singleLine="true"/>
+
+
+ <GridLayout
+     android:id="@+id/gridLayout"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_marginTop="16dp"
+     android:columnCount="4"
+     android:rowCount="5"
+     android:alignmentMode="alignMargins"
+     android:useDefaultMargins="true">
+
+
+  <Button
+      android:id="@+id/btn7"
+      android:text="7"
+      style="@style/CalcButton" />
+  <Button
+      android:id="@+id/btn8"
+      android:text="8"
+      style="@style/CalcButton"/>
+  <Button
+      android:id="@+id/btn9"
+      android:text="9"
+      style="@style/CalcButton"/>
+  <Button
+      android:id="@+id/btnMas"
+      android:text="+"
+      style="@style/CalcButton"/>
+
+
+  <Button
+      android:id="@+id/btn4"
+      android:text="4"
+      style="@style/CalcButton"/>
+  <Button
+      android:id="@+id/btn5"
+      android:text="5"
+      style="@style/CalcButton"/>
+  <Button
+      android:id="@+id/btn6"
+      android:text="6"
+      style="@style/CalcButton"/>
+  <Button
+      android:id="@+id/btnMenos"
+      android:text="-"
+      style="@style/CalcButton"/>
+
+
+  <Button
+      android:id="@+id/btn1"
+      android:text="1"
+      style="@style/CalcButton"/>
+  <Button
+      android:id="@+id/btn2"
+      android:text="2"
+      style="@style/CalcButton"/>
+  <Button
+      android:id="@+id/btn3"
+      android:text="3"
+      style="@style/CalcButton"/>
+  <Button
+      android:id="@+id/btnPor"
+      android:text="*"
+      style="@style/CalcButton"/>
+
+
+  <Button
+      android:id="@+id/btnPto"
+      android:text="."
+      style="@style/CalcButton"/>
+  <Button
+      android:id="@+id/btn0"
+      android:text="0"
+      style="@style/CalcButton"/>
+  <Button
+      android:id="@+id/btnDividir"
+      android:text="/"
+      style="@style/CalcButton"/>
+  <Button
+      android:id="@+id/btnIgual"
+      android:text="="
+      style="@style/CalcButton"/>
+ </GridLayout>
+
+
+
+</LinearLayout>
