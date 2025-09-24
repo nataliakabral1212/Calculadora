@@ -6,6 +6,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowInsetsCompat
 import net.objecthunter.exp4j.ExpressionBuilder
+import kotlin.math.abs
 
 class MainActivity : AppCompatActivity() {
     private lateinit var tvDisplay: TextView
@@ -53,12 +54,23 @@ class MainActivity : AppCompatActivity() {
             try {
                 val expression = ExpressionBuilder(input).build()
                 val result = expression.evaluate()
-                tvDisplay.text = result.toString()
-                input = result.toString()
+                val resultadoNormalizado = normalizarResultado(result)
+
+                if (resultadoNormalizado % 1.0 == 0.0) {
+                    tvDisplay.text = resultadoNormalizado.toInt().toString()
+                    input = resultadoNormalizado.toInt().toString()
+                } else {
+                    tvDisplay.text = resultadoNormalizado.toString()
+                    input = resultadoNormalizado.toString()
+                }
+
             } catch (e: Exception) {
                 tvDisplay.text = "Syntax ERROR"
                 input = ""
             }
         }
+    }
+    private fun normalizarResultado(valor: Double): Double {
+        return if (abs(valor) < 1e-10) 0.0 else valor
     }
 }
